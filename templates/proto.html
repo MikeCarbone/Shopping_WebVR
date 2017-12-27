@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mike Dancing?</title>
+    <meta name="description" content="Hello, WebVR! - A-Frame">
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/tizzle/aframe-orbit-controls-component/v0.1.14/dist/aframe-orbit-controls-component.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ static_url('css/style.css') }}">
+  </head>
+  <body>
+  <nav>
+  	<div class="logo">
+  		 <img src="{{ static_url('images/ubbLogo.png') }}">
+  	</div>
+  	<ul>
+  		<li><a href="#">BLOG</a></li>
+  		<li><a href="#">SALE</a></li>
+  		<li><a href="#">CAMP + HOME</a></li>
+  		<li><a href="#">BAGS</a></li>
+  		<li><a href="#">MEN</a></li>
+  		<li><a href="#">WOMEN</a></li>
+  		<li><a href="#">NEW ARRIVAL</a></li>
+  	</ul>
+  </nav>
+
+  <main>
+  	<div class="textStuff">
+  		<h1>Red Flannel Shirt</h1>
+
+  		<h3>FREE EXCHANGES + EASY RETURNS</h3>
+
+  		<h2>$28.00</h2>
+
+  		<h3>QTY</h3>
+  	</div>
+
+
+ 	<!-- ______________________VR ZONE_____________________________-->
+
+
+    <div class="model" style="width: 500px; height: 600px;">
+      <a-scene class="scene" embedded inspector keyboard-shortcuts screenshot vr-mode-ui="enabled: false;">
+
+       <a-entity id="camera" camera position="0 0 5" orbit-controls="
+            target: #target;
+            enableDamping: true;
+            enableZoom: false;
+            dampingFactor: 0.125;
+            rotateSpeed:0.25;
+            rotateToSpeed: 0.04;
+            rotateTo: 0.172 4.140 2.797;
+            logPosition: false;
+            ">
+        </a-entity>
+
+        <a-entity id="target">
+          <a-gltf-model position="0 -3 0" scale="3 3 3" id="mike" src="{{ static_url('mike_dancing/scene.gltf') }}" animation-mixer></a-gltf-model>
+          <a-light type="ambient" color="#fff"></a-light>
+
+        </a-entity>
+        <a-sky color="#252525"></a-sky>
+        <a-light></a-light>
+        
+    </a-scene>
+    </div>
+    </main>
+  </body>
+</html>
