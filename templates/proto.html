@@ -8,13 +8,15 @@
     <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
     <link rel="stylesheet" type="text/css" href="{{ static_url('css/style.css') }}">
     <link rel="icon" href="{{ static_url('images/mcIcon-01.png') }}">
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+
   </head>
   <body>
   <nav>
   	<div class="logo">
   		 <img src="{{ static_url('images/ubbLogo.png') }}">
   	</div>
-  	<ul>
+  	<ul id="listNav">
   		<li><a href="#">BLOG</a></li>
   		<li><a href="#">SALE</a></li>
   		<li><a href="#">CAMP + HOME</a></li>
@@ -23,6 +25,13 @@
   		<li><a href="#">WOMEN</a></li>
   		<li><a href="#">NEW ARRIVAL</a></li>
   	</ul>
+    <div id="hamburger">
+      <a href="#">
+        <div class="burgerBun"></div>
+        <div class="burgerBun"></div>
+        <div class="burgerBun"></div>
+      </a>
+    </div>
   </nav>
 
   <main>
@@ -40,7 +49,7 @@
  	<!-- ______________________VR ZONE_____________________________-->
 
 
-    <div class="model" style="width: 500px; height: 600px;">
+    <div class="model" style="">
       <a-scene class="scene" embedded inspector keyboard-shortcuts screenshot vr-mode-ui="enabled: false;">
 
        <a-entity id="camera" camera position="0 0 5" orbit-controls="

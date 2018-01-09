@@ -1,5 +1,6 @@
 *{
 	box-sizing: border-box;
+	font-family: 'Slabo 27px', serif;
 	margin: 0;
 	padding: 0;
 }
@@ -23,7 +24,7 @@ nav{
 ul{
 	display: inline-block;
 	float: right;
-	padding: 0px 20px 0px 0px;
+	padding: 0px 0px 0px 0px;
 	text-align: right;
 	width: 70%;
 }
@@ -42,26 +43,26 @@ li:hover{
 }
 
 h1.logo{
-	width: 30%;
+	width: 20%;
 }
 
 div.logo{
 	display: inline-block;
 	padding: 23px 0 15px 15px;
-	width: 30%;
+	width: 20%;
 }
 
 img{
-	height: 75px;
+	height: 62px;
 	padding: 0;
 	margin: 0;
 	position: absolute;
-	top: 0;
+	top: 4px;
 	z-index: 30;
 }
 
 main{
-	margin: 0 15% 0 15%;
+	margin: 0 0% 0 0%;
 }
 
 a{
@@ -71,7 +72,11 @@ a{
 }
 
 .model{
-	margin: 5% auto 0 auto;
+	margin: 50px auto 0 auto;
+	height: 60vh;
+	width: 35vw;
+	min-width: 300px;
+	min-height: 500px;
 }
 
 .textStuff{
@@ -83,4 +88,43 @@ a{
 h3{
 	font-size: .85rem;
 	margin: 15px 0;
+}
+
+#hamburger{
+	display: none;
+	float: right;
+	margin: 13px 20px 0 0;
+}
+
+.burgerBun{
+	background-color: #fcfcfc;
+	height: 4px;
+	margin: 9px 0 0 0;
+	width: 40px;
+}
+
+@media (max-width: 800px){
+	#hamburger{
+		display: inline-block;
+	}
+
+	#listNav{
+		display: none;
+	}
+
+	.textStuff{
+		display: block;
+		float: none;
+		margin: 15px auto 0 auto;
+		text-align: center;
+		width: 100%;
+	}
+
+	h3{
+		margin: 5px;
+	}
+
+	.model{
+		margin: 15px auto 0 auto;
+	}
 }
