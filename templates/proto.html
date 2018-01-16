@@ -44,12 +44,18 @@
 
   		<h3>QTY</h3>
   	</div>
-
+      <div id="hiddenPics">
+          <img class="bigPic" id="plaid1" src="{{ static_url('images/plaid1.jpg') }}">
+          <img class="bigPic" id="plaid2" src="{{ static_url('images/plaid2.jpg') }}">
+          <img class="bigPic" id="plaid3" src="{{ static_url('images/plaid3.jpg') }}">
+          <img class="bigPic" id="plaid4" src="{{ static_url('images/plaid4.jpg') }}">
+      </div>
 
  	<!-- ______________________VR ZONE_____________________________-->
 
 
     <div class="model" style="">
+      
       <a-scene class="scene" embedded inspector keyboard-shortcuts screenshot vr-mode-ui="enabled: false;">
 
        <a-entity id="camera" camera position="0 0 5" orbit-controls="
@@ -74,6 +80,13 @@
         
     </a-scene>
     </div>
+     <div id="showcase">
+        <img onclick="reveal1()" class="miniPic" src="{{ static_url('images/plaid1.jpg') }}">
+        <img onclick="reveal2()" class="miniPic" src="{{ static_url('images/plaid2.jpg') }}">
+        <img onclick="reveal3()" class="miniPic" src="{{ static_url('images/plaid3.jpg') }}">
+        <img onclick="reveal4()" class="miniPic" src="{{ static_url('images/vr.png') }}">
+      </div>
     </main>
   </body>
+  <script type="text/javascript" src="{{ static_url('js/fancy.js') }}"></script>
 </html>

@@ -103,6 +103,37 @@ h3{
 	width: 40px;
 }
 
+#showcase{
+	display: inline-block;
+	text-align: center;
+	margin: 0 auto;
+	min-width: 300px;
+	width: 100%;
+}
+
+img.miniPic{
+	cursor: pointer;
+	display: inline-block;
+	height: auto;
+	margin: 10px;
+	position: static;
+	width: 70px;
+}
+
+#hiddenPics{
+
+}
+
+#plaid1, #plaid2, #plaid3, #plaid4{
+	display: none;
+	height: 450px;
+	margin: 50px auto 0px auto;
+	min-width: 300px;
+	min-height: 500px;
+	position: static;
+	width: auto;
+}
+
 @media (max-width: 800px){
 	#hamburger{
 		display: inline-block;
@@ -125,6 +156,10 @@ h3{
 	}
 
 	.model{
+		margin: 15px auto 0 auto;
+	}
+
+	#plaid1, #plaid2, #plaid3, #plaid4{
 		margin: 15px auto 0 auto;
 	}
 }
